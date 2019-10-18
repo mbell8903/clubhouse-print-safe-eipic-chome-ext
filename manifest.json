@@ -1,0 +1,58 @@
+{
+	"manifest_version": 2,
+	"name": "Clubhouse Print SAFe Epic",
+	"version": "0.1",
+
+	"description": "Adds a print button to a clubhouse epic that prints out an epic as a SAFe feature",
+	"icons": {
+		"16": "images/icon48x48.png",
+		"32": "images/icon48x48.png",
+		"48": "images/icon48x48.png",
+		"128": "images/icon48x48.png"
+	},
+
+	"browser_action": {
+		"default_icon": {
+			"16": "images/icon48x48.png",
+			"32": "images/icon48x48.png",
+			"48": "images/icon48x48.png",
+			"128": "images/icon48x48.png"
+		}
+	},
+
+	"background": {
+		"scripts": [
+			"background.js"
+		],
+		"persistent": false
+	},
+
+	"content_scripts": [
+		{
+			"matches": [
+				"https://app.clubhouse.io/teralogics/epics",
+				"https://app.clubhouse.io/teralogics/epic/*"
+			],
+			"js": [
+				"js/jquery-3.4.1.min.js",
+				"content.js"
+			]
+		}
+	],
+
+	"web_accessible_resources": [
+		"window-child.html"
+	],
+
+	"permissions": [
+		"activeTab",
+		"storage",
+		"https://app.clubhouse.io/"
+	],
+
+	"options_ui": {
+		"page": "options.html",
+		"open_in_tab": false
+	},
+	"options_page": "options.html"
+}

@@ -1,0 +1,42 @@
+<html>
+<head>
+	<title>Epic List</title>
+	<style>
+		.print {
+			display:none
+		}
+		h2.epic-name {
+			margin-bottom: -8px;
+		}
+		p.epic-url, p.epic-deadline {
+			font-size: 0.8em;
+			margin-bottom: -8px;
+		}
+		img {
+			height: 24px;
+			width: 24px;
+			border: 0;
+		}
+		.avatar {
+			background: #ddd;
+			border-radius: 100%;
+			margin: 5px;
+		}
+		@media print {
+			.print {display:block}
+			.btn-print {display:none;}
+
+			h2.epic-name {
+				page-break-before: always;
+			}
+		}
+	</style>
+</head>
+<body>
+<button class="btn-print">Print</button>
+<div id="epics-list"></div>
+<script src="/js/jquery-3.4.1.min.js"></script>
+<script src="/js/showdown.min.js"></script>
+<script src="/window-child.js"></script>
+</body>
+</html>

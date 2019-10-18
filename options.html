@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>My Test Extension Options</title>
+		<style>
+			input {
+				margin: 5px;
+			}
+			.flex-container {
+				display: flex;
+			}
+			.flex-column {
+				display: flex;
+				flex-direction: column;
+			}
+			.flex-row {
+				display: flex;
+				flex-direction: row;
+			}
+			.status {
+				flex-grow: 1;
+			}
+			button {
+				color: rgb(26, 115, 232);
+				font-family: Roboto, "Segoe UI", Tahoma, sans-serif;
+				font-size: 13px;
+				height: 32px;
+				line-height: 20px;
+				width: 81px;
+				border-radius: 4px;
+				background-color: #fff;
+				box-shadow: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="flex-container">
+			<div class="flex-column">
+				<div class="flex-row">
+					<div>
+						API Key: <input type="text" id="apiKey"/>
+						<span id="status" class="status"></span>
+					</div>
+				</div>
+				<div class="flex-row">
+					<div>
+						<button id="save">Save</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="options.js"></script>
+	</body>
+</html>
