@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
 	"name": "Clubhouse Print SAFe Epic",
-	"version": "0.1",
+	"version": "0.2",
 
 	"description": "Adds a print button to a clubhouse epic that prints out an epic as a SAFe feature",
 	"icons": {
@@ -31,6 +31,7 @@
 		{
 			"matches": [
 				"https://app.clubhouse.io/teralogics/epics",
+				"https://app.clubhouse.io/teralogics/epics?*",
 				"https://app.clubhouse.io/teralogics/epic/*"
 			],
 			"js": [
